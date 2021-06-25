@@ -1,13 +1,14 @@
 @extends('templates/header')
-@section('contentst')
+@section('contents')
 <!-- Inner Page Banner Area Start Here -->
 <div class="inner-page-banner-area" style="background-image: url('{{asset('assets')}}/img/team/Dosen-RPL-Cibiru.jpg');">
     <div class="container">
         <div class="pagination-area">
-            <h1>Lecturers Details</h1>
+            <h1>Detail Dosen</h1>
             <ul>
-                <li><a href="#">Home</a> -</li>
-                <li>Details</li>
+                <li><a href="{{url('/')}}">Home</a> -</li>
+                <li><a href="{{url('/staff')}}">Staff</a> -</li>
+                <li>Detail Dosen</li>
             </ul>
         </div>
     </div>
@@ -19,10 +20,9 @@
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="lecturers-contact-info">
-                    <img src="img/team/13.jpg" class="img-responsive" alt="team">
-                    <h2>John Rojario</h2>
-                    <h3>Political Science</h3>
-                    <ul class="lecturers-social2">
+                    <img src="{{asset("assets")}}/images/dosen/{{$data['dosen']->image_path}}" class="img-responsive" alt="team">
+                    <h2>{{$data['dosen']->nama}}</h2>
+                    {{-- <ul class="lecturers-social2">
                         <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -30,22 +30,30 @@
                     </ul>
                     <ul class="lecturers-contact">
                         <li><i class="fa fa-phone" aria-hidden="true"></i>+61 3 8376 6284</li>
-                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i>academics@gmail.co</li>
-                    </ul>
+                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i>email</li>
+                    </ul> --}}
                 </div>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
-                <h3 class="title-default-left title-bar-big-left-close">About Me</h3>
-                <p>Eimply dummy text of the printing and typesetting industry. Eimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text type and scrambled it to make a type specimen book. Eimply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Eimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text type and scrambled it to make a type specimen book. </p>
-                <h3 class="title-default-left title-bar-big-left-close">Qualifications</h3>
+                <h3 class="title-default-left title-bar-big-left-close">Pendidikan</h3>
                 <ul class="course-feature2">
-                    <li>Research the conditions of urbanism</li>
-                    <li>Employ advanced design techniques</li>
-                    <li>Lens of landscape theory and design practice</li>
-                    <li>Employ advanced design techniques</li>
-                    <li>Innovative methodologies</li>
+                    @foreach ($data['pendidikan'] as $pendidikan)
+                    <li>{{$pendidikan->nama}}</li>
+                    @endforeach
                 </ul>
-                <div class="leave-comments">
+                <h3 class="title-default-left title-bar-big-left-close">Pengajaran</h3>
+                <ul class="course-feature2">
+                    @foreach ($data['pengajaran'] as $pengajaran)
+                    <li>{{$pengajaran->nama}}</li>
+                    @endforeach
+                </ul>
+                <h3 class="title-default-left title-bar-big-left-close">Publikasi</h3>
+                <ul class="course-feature2">
+                    @foreach ($data['publikasi'] as $publikasi)
+                    <li>{{$publikasi->nama}}</li>
+                    @endforeach
+                </ul>
+                {{-- <div class="leave-comments">
                     <h3 class="title-default-left title-bar-big-left-close">Contact With Me</h3>
                     <div class="row">
                         <div class="contact-form">
@@ -78,7 +86,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

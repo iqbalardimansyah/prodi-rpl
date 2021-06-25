@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="{{asset('assets')}}/css/reImageGrid.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{asset('assets')}}/style.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/admin/style.css">
     @stack('style')
     <!-- Modernizr Js -->
     <script src="{{asset('assets')}}/js/modernizr-2.8.3.min.js"></script>
@@ -160,7 +161,7 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul>
-                                        <li class="active"><a href="#">Home</a></li>
+                                        <li class="active"><a href="{{url('/')}}">Home</a></li>
                                         <li><a class="unselectable">Profil</a>
                                             <ul>
                                                 <li class="has-child-menu"><a class="unselectable">Tentang Kami</a>

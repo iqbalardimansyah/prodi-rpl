@@ -1,3 +1,4 @@
+@stack('script')
 <script src="{{asset('assets')}}/js/jquery-2.2.4.min.js" type="text/javascript"></script>
 <!-- Plugins js -->
 <script src="{{asset('assets')}}/js/plugins.js" type="text/javascript"></script>
@@ -27,3 +28,4 @@
 <script src="{{asset('assets')}}/js/jquery.gridrotator.js" type="text/javascript"></script>
 <!-- Custom Js -->
 <script src="{{asset('assets')}}/js/main.js" type="text/javascript"></script>
+

@@ -17,96 +17,23 @@
     <div class="lecturers-page2-area">
         <div class="container" id="inner-isotope">
             <div class="row featuredContainer">
+                @foreach ($result as $dosen)
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 diploma cse">
                     <div class="single-item">
                         <div class="lecturers-item-wrapper">
-                            <a href="#"><img class="img-responsive" src="{{asset('assets')}}/img/team/Pa-Radit.jpg" alt="team"></a>
+                            <a href="#"><img class="img-responsive" src="{{asset('assets')}}/images/dosen/{{$dosen->image_path}}" alt="team"></a>
                             <div class="lecturers-content-wrapper">
-                                <h3><a href="#">Raditya Muhammad, S.T., M.T.</a></h3>
+                                <h3><a href="#">{{$dosen->nama}}</a></h3>
                                 <span>Dosen RPL</span>
                                 <p style="color: transparent" class="unselectable">Eimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industummy text.</p>
                                 <div class="apply-btn-area">
-                                    <a href="https://www.upi.edu/" class="apply-now-btn">Lihat Selengkapnya</a>
+                                    <a href="{{url("dosen/$dosen->id_dosen")}}" class="apply-now-btn">Lihat Selengkapnya</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 cse english">
-                    <div class="single-item">
-                        <div class="lecturers-item-wrapper">
-                            <a href="#"><img class="img-responsive" src="{{asset('assets')}}/img/team/Pa-Hendriyana.jpg" alt="team"></a>
-                            <div class="lecturers-content-wrapper">
-                                <h3><a href="#">Hendriyana, S.T., M.KOM.</a></h3>
-                                <span>Dosen RPL</span>
-                                <p style="color: transparent" class="unselectable">Eimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industummy text.</p>
-                                <div class="apply-btn-area">
-                                    <a href="https://www.upi.edu/" class="apply-now-btn">Lihat Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 diploma english">
-                    <div class="single-item">
-                        <div class="lecturers-item-wrapper">
-                            <a href="#"><img class="img-responsive" src="{{asset('assets')}}/img/team/Pa-IqbalArdimansyah.jpg" alt="team"></a>
-                            <div class="lecturers-content-wrapper">
-                                <h3><a href="#">Mochamad Iqbal Ardimansyah, S.T., M.KOM.</a></h3>
-                                <span>Dosen RPL</span>
-                                <p style="color: transparent" class="unselectable">Eimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industummy text.</p>
-                                <div class="apply-btn-area">
-                                    <a href="https://www.upi.edu/" class="apply-now-btn">Lihat Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 cse medical">
-                    <div class="single-item">
-                        <div class="lecturers-item-wrapper">
-                            <a href="#"><img class="img-responsive" src="{{asset('assets')}}/img/team/Bu-Asyifa.jpg" alt="team"></a>
-                            <div class="lecturers-content-wrapper">
-                                <h3><a href="#">Asyifa Imanda Septiana, S.PD., M.ENG.</a></h3>
-                                <span>Dosen RPL</span>
-                                <p style="color: transparent" class="unselectable">Eimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industummy text.</p>
-                                <div class="apply-btn-area">
-                                    <a href="https://www.upi.edu/" class="apply-now-btn">Lihat Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 diploma english">
-                    <div class="single-item">
-                        <div class="lecturers-item-wrapper">
-                            <a href="#"><img class="img-responsive" src="{{asset('assets')}}/img/team/Bu-Indira.jpg" alt="team"></a>
-                            <div class="lecturers-content-wrapper">
-                                <h3><a href="#">Indira Syawanodya, S.KOM., M.KOM.</a></h3>
-                                <span>Dosen RPL</span>
-                                <p style="color: transparent" class="unselectable">Eimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industummy text.</p>
-                                <div class="apply-btn-area">
-                                    <a href="https://www.upi.edu/" class="apply-now-btn">Lihat Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 cse english medical">
-                    <div class="single-item">
-                        <div class="lecturers-item-wrapper">
-                            <a href="#"><img class="img-responsive" src="{{asset('assets')}}/img/team/Bu-Dian.jpg" alt="team"></a>
-                            <div class="lecturers-content-wrapper">
-                                <h3><a href="#">Dian Anggraini, S.ST., M.T.</a></h3>
-                                <span>Dosen RPL</span>
-                                <p style="color: transparent" class="unselectable">Eimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industummy text.</p>
-                                <div class="apply-btn-area">
-                                    <a href="https://www.upi.edu/" class="apply-now-btn">Lihat Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
